@@ -1,103 +1,140 @@
-import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+import React from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+
+export function EmblaCarousel() {
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 4000 }),
+  ]);
+
+  // ...
+}
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className="grid grid-col-2 md:grid-col-3 lg:grid-col-3 flex justify-center items-center min-h-screen">
+      <section className="flex items-center w-full max-w-4xl mx-auto px-4 py-2 space-x-4">
+        <img
+          src="https://i.ibb.co/XZ71sCGN/pfp.jpg"
+          alt="Joshua's Profile Picture"
+          className="w-48 h-48 mx-auto rounded-full border-2 mr-2"
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="flex-1 space-y-6">
+          <Card className="shadow-md bg-background border rounded-xl p-6">
+            <CardHeader className="text-3xl text-center font-bold mb-5">
+              My skills 📋
+            </CardHeader>
+            <CardContent>
+              <ul className="text-xl text-center">
+                <li>Javascript </li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Tailwind CSS</li>
+                <li>Next.js (basics)</li>
+                <li>Node.js (basics)</li>
+                <li>React (basics)</li>
+              </ul>
+            </CardContent>
+          </Card>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+      <section className="w-full max-w-4xl mx-auto px-4 py-2">
+        <div className="space-y-6">
+          <Card className="shadow-md bg-background border rounded-lg p-6">
+            <CardHeader className="text-2xl text-center font-bold mb-5">
+              Hi I'm Josh👋
+            </CardHeader>
+            <CardContent>
+              <p className="text-lg text-center font-bold underline mb-4">
+                A Small Brief
+              </p>
+              <p className="text-sm text-center pb-4">
+                I am a Junior Software Developer that is passionate about
+                gaining knowledge for coding through self taught methods.
+                <br />
+                <br />I wish to aim myself more in the direction of back-end
+                development however I do wish to learn a lot more about
+                front-end as well, as I have a life goal to eventually become a
+                self-employed full-stack developer desiring to continue this
+                passion well into the future.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+      <h1 className="text-3xl text-center font-bold underline decoration-2 mb-4 mt-15">
+        My Projects
+      </h1>
+      <section className="w-full max-w-4xl mx-auto px-4 py-2 mt-10">
+        <Carousel
+          orientation="vertical"
+          className="w-full max-w-2xl mx-auto px-6"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <CarouselContent className="-ml-4 flex touch-pan-x snap-x snap-mandatory h-[270px] sm:h-[250px] md:h-[270px]">
+            <CarouselItem className="flex-none w-full pl-4 snap-start">
+              <Card className="p-8 text-center shadow-lg border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+                <div className="flex flex-col items-center gap-4">
+                  <CardTitle className="text-xl font-semibold text-center">
+                    Zajaik
+                  </CardTitle>
+                  <CardContent className="text-muted-foreground text-sm text-center p-0"></CardContent>
+                </div>
+              </Card>
+            </CarouselItem>
+            <CarouselItem>
+              <Card className="p-8 text-center shadow-lg border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+                <div className="flex flex-col items-center gap-4">
+                  <CardTitle className="text-xl font-semibold text-center">
+                    Text Adventure Game
+                  </CardTitle>
+                  <CardContent className="text-muted-foreground text-sm text-center p-0"></CardContent>
+                </div>
+              </Card>
+            </CarouselItem>
+            <CarouselItem>
+              <Card className="p-8 text-center shadow-lg border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+                <div className="flex flex-col items-center gap-4">
+                  <CardTitle className="text-xl font-semibold text-center">
+                    Caesar Cipher
+                  </CardTitle>
+                  <CardContent className="text-muted-foreground text-sm text-center p-0"></CardContent>
+                </div>
+              </Card>
+            </CarouselItem>
+            <CarouselItem>
+              <Card className="p-8 text-center shadow-lg border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+                <div className="flex flex-col items-center gap-4">
+                  <CardTitle className="text-xl font-semibold text-center">
+                    Calculator
+                  </CardTitle>
+                  <CardContent className="text-muted-foreground text-sm text-center p-0"></CardContent>
+                </div>
+              </Card>
+            </CarouselItem>
+            <CarouselItem>
+              <Card className="p-8 text-center shadow-sm border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+                <div className="flex flex-col items-center gap-4">
+                  <CardTitle className="text-xl font-semibold text-center">
+                    Weather App
+                  </CardTitle>
+                  <CardContent className="text-muted-foreground text-sm text-center p-0"></CardContent>
+                </div>
+              </Card>
+            </CarouselItem>
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </section>
     </div>
   );
 }
