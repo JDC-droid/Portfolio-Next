@@ -1,10 +1,11 @@
 "use client"
+//Navbar content incase wish to make changes to this portfolio in the future
+//I was undecided, so this component can be stored within its folder
 import React from 'react';
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
