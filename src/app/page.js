@@ -1,3 +1,4 @@
+"use client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import React from "react";
@@ -8,6 +9,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import Link from "next/link";
+import { GithubIcon } from "lucide-react";
+
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -22,19 +31,45 @@ export function EmblaCarousel() {
 export default function Home() {
   return (
     <div className="grid grid-col-2 md:grid-col-3 lg:grid-col-3 flex justify-center items-center min-h-screen">
-      <section className="flex items-center w-full max-w-4xl mx-auto px-4 py-2 space-x-4">
-        <img
-          src="https://i.ibb.co/XZ71sCGN/pfp.jpg"
-          alt="Joshua's Profile Picture"
-          className="w-48 h-48 mx-auto rounded-full border-2 mr-2"
-        />
+      <section className="flex items-center w-full max-w-4xl mx-auto px-4 py-2 space-x-4 mt-10">
+        <div>
+          <img
+            src="https://i.ibb.co/XZ71sCGN/pfp.jpg"
+            alt="Joshua's Profile Picture"
+            className="w-48 h-48 mx-auto rounded-full border-2 mr-2"
+          />
+        </div>
+        <div>
+          <HoverCard className="">
+            <HoverCardTrigger>
+              <GithubIcon />
+            </HoverCardTrigger>
+            <HoverCardContent className="text-center">
+              <Link
+                href="https://www.linkedin.com/in/joshua-degg-a174b7296/"
+                className="hover:text-blue-500 hover:underline"
+              >
+                LinkedIn
+              </Link>
+              <br />
+              <Link
+                href="https://github.com/JDC-droid"
+                className="hover:text-blue-500 hover:underline"
+              >
+                Github
+              </Link>
+              <p>Phone Number: 07853532947</p>
+              <p>Email: josh040890@gmail.com</p>
+            </HoverCardContent>
+          </HoverCard>
+        </div>
         <div className="flex-1 space-y-6">
           <Card className="shadow-md bg-background border rounded-xl p-6">
-            <CardHeader className="text-3xl text-center font-bold mb-5">
+            <CardHeader className="text-3xl text-center font-bold">
               My skills 📋
             </CardHeader>
             <CardContent>
-              <ul className="text-xl text-center">
+              <ul className="flex flex-col justify-between text-xl text-center h-65">
                 <li>Javascript </li>
                 <li>HTML</li>
                 <li>CSS</li>
@@ -134,6 +169,12 @@ export default function Home() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+      </section>
+      <section>
+        <Card>
+          <CardHeader></CardHeader>
+          <CardContent></CardContent>
+        </Card>
       </section>
     </div>
   );
