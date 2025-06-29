@@ -15,7 +15,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import Link from "next/link";
-import { GithubIcon } from "lucide-react";
+import { GithubIcon, Linkedin, PhoneCall, Mail } from "lucide-react";
 
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -38,30 +38,50 @@ export default function Home() {
             alt="Joshua's Profile Picture"
             className="w-48 h-48 mx-auto rounded-full border-2 mr-2"
           />
-        </div>
-        <div>
-          <HoverCard className="">
-            <HoverCardTrigger>
-              <GithubIcon />
-            </HoverCardTrigger>
-            <HoverCardContent className="text-center">
-              <Link
-                href="https://www.linkedin.com/in/joshua-degg-a174b7296/"
-                className="hover:text-blue-500 hover:underline"
-              >
-                LinkedIn
-              </Link>
-              <br />
-              <Link
-                href="https://github.com/JDC-droid"
-                className="hover:text-blue-500 hover:underline"
-              >
-                Github
-              </Link>
-              <p>Phone Number: 07853532947</p>
-              <p>Email: josh040890@gmail.com</p>
-            </HoverCardContent>
-          </HoverCard>
+          <div className="flex justify-center gap-2 mt-4">
+            <HoverCard className="">
+              <HoverCardTrigger>
+                <GithubIcon />
+              </HoverCardTrigger>
+              <HoverCardContent className="text-center">
+                <Link
+                  href="https://github.com/JDC-droid"
+                  className="hover:text-blue-500 hover:underline"
+                >
+                  Github
+                </Link>
+              </HoverCardContent>
+            </HoverCard>
+            <HoverCard>
+              <HoverCardTrigger>
+                <Linkedin />
+              </HoverCardTrigger>
+              <HoverCardContent className="text-center">
+                <Link
+                  href="https://www.linkedin.com/in/joshua-degg-a174b7296/"
+                  className="hover:text-blue-500 hover:underline"
+                >
+                  LinkedIn
+                </Link>
+              </HoverCardContent>
+            </HoverCard>
+            <HoverCard>
+              <HoverCardTrigger>
+                <PhoneCall />
+              </HoverCardTrigger>
+              <HoverCardContent className="text-center">
+                <p>Phone Number: 07853532947</p>
+              </HoverCardContent>
+            </HoverCard>
+            <HoverCard>
+              <HoverCardTrigger>
+                <Mail />
+              </HoverCardTrigger>
+              <HoverCardContent className="text-center">
+                <p>Email: josh040890@gmail.com</p>
+              </HoverCardContent>
+            </HoverCard>
+          </div>
         </div>
         <div className="flex-1 space-y-6">
           <Card className="shadow-md bg-background border rounded-xl p-6">
