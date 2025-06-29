@@ -34,7 +34,7 @@ export default function Home() {
       <section className="flex items-center w-full max-w-4xl mx-auto px-4 py-2 space-x-4 mt-10">
         <div>
           <img
-            src="https://i.ibb.co/XZ71sCGN/pfp.jpg"
+            src="https://i.ibb.co/Xg5FWSm/Profes-pfp.png"
             alt="Joshua's Profile Picture"
             className="w-48 h-48 mx-auto rounded-full border-2 mr-2"
           />
