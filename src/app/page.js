@@ -102,10 +102,23 @@ export default function Home() {
             </CardHeader>
             <hr className="my-2 border-t border-gray-300 w-35 mx-auto -mb-5 -mt-5" />
             <CardContent>
-              <ul className="flex flex-col justify-between text-lg text-center h-65">
-                <li>Javascript </li>
-                <li>HTML</li>
-                <li>CSS</li>
+              <ul className="flex flex-col justify-between mx-auto text-lg text-center h-65">
+                <li className="flex justify-between mx-auto">Javascript </li>
+                <li className="flex justify-between mx-auto">
+                  HTML{" "}
+                  <svg
+                    class="w-6 h-6 text-gray-800 dark:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                  </svg>
+                </li>
+                <li className="flex justify-between mx-auto">CSS</li>
                 <li>Tailwind CSS</li>
                 <li>Next.js (basics)</li>
                 <li>Node.js (basics)</li>
@@ -128,50 +141,145 @@ export default function Home() {
             <CarouselItem className="flex-none w-full pl-4 snap-start">
               <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
                 <div className="flex flex-col items-center gap-4">
-                  <CardTitle className="text-xl font-semibold text-center">
-                    Zajaik
-                  </CardTitle>
-                  <CardContent className="text-muted-foreground text-sm text-center p-0"></CardContent>
+                  <div className="bg-muted rounded-lg p-3">
+                    <img
+                      src="https://i.ibb.co/P2mC5Kz/Screenshot-2025-06-29-224139.png"
+                      alt="Zajaik Webpage Screenshot"
+                      className="w-30 h-30 text-primary rounded-lg"
+                    />
+                  </div>
+                  <div className="flex flex-col items-center gap-4">
+                    <CardTitle className="text-xl font-semibold text-center">
+                      Zajaik
+                    </CardTitle>
+                    <CardContent className="flex flex-col text-muted-foreground text-sm text-center p-0">
+                      <p className="text-base">Links:</p>
+                      <Link
+                        href="https://zajaik.com/"
+                        className="hover:text-blue-500 hover:underline"
+                      >
+                        Zajaik.com
+                      </Link>
+                    </CardContent>
+                  </div>
                 </div>
               </Card>
             </CarouselItem>
             <CarouselItem>
               <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+                <div className="bg-muted rounded-lg p-3">
+                  <img
+                    src="https://i.ibb.co/spfkkTw1/Screenshot-2025-04-29-154323.png"
+                    alt="Text-Adventure Game Screenshot"
+                    className="w-30 h-30 text-primary rounded-lg"
+                  />
+                </div>
                 <div className="flex flex-col items-center gap-4">
                   <CardTitle className="text-xl font-semibold text-center">
                     Text Adventure Game
                   </CardTitle>
-                  <CardContent className="text-muted-foreground text-sm text-center p-0"></CardContent>
+                  <CardContent className="flex flex-col text-muted-foreground text-sm text-center p-0">
+                    <p className="text-base">Links:</p>
+                    <Link
+                      href="https://jdc-droid.github.io/Text-Adventure-Game/"
+                      className="hover:text-blue-500 hover:underline"
+                    >
+                      Text-Adventure Webpage
+                    </Link>
+                    <Link
+                      href="https://github.com/JDC-droid/Text-Adventure-Game"
+                      className="hover:text-blue-500 hover:underline"
+                    >
+                      Github Repository
+                    </Link>
+                  </CardContent>
                 </div>
               </Card>
             </CarouselItem>
             <CarouselItem>
               <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+                <div className="bg-muted rounded-lg p-3">
+                  <img
+                    src="https://i.ibb.co/C3XwZ7WS/Screenshot-2025-06-30-015438.png"
+                    alt="Caesar Cipher Screenshot"
+                    className="w-30 h-30 text-primary rounded-lg"
+                  />
+                </div>
                 <div className="flex flex-col items-center gap-4">
                   <CardTitle className="text-xl font-semibold text-center">
                     Caesar Cipher
                   </CardTitle>
-                  <CardContent className="text-muted-foreground text-sm text-center p-0"></CardContent>
+                  <CardContent className="flex flex-col text-muted-foreground text-sm text-center p-0">
+                    <p className="text-base">Links:</p>
+                    <Link
+                      href="https://jdc-droid.github.io/Tester-Caesar-Cipher/"
+                      className="hover:text-blue-500 hover:underline"
+                    >
+                      Caesar Cipher Webpage
+                    </Link>
+                    <Link
+                      href="https://github.com/JDC-droid/Tester-Caesar-Cipher"
+                      className="hover:text-blue-500 hover:underline"
+                    >
+                      Github Repository
+                    </Link>
+                  </CardContent>
                 </div>
               </Card>
             </CarouselItem>
             <CarouselItem>
               <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+                <div className="bg-muted rounded-lg p-3">
+                  <img
+                    src="https://i.ibb.co/ynxL1rxW/Screenshot-2025-04-29-154425.png"
+                    alt="Calculator Screenshot"
+                    className="w-30 h-30 text-primary rounded-lg"
+                  />
+                </div>
                 <div className="flex flex-col items-center gap-4">
                   <CardTitle className="text-xl font-semibold text-center">
                     Calculator
                   </CardTitle>
-                  <CardContent className="text-muted-foreground text-sm text-center p-0"></CardContent>
+                  <CardContent className="flex flex-col text-muted-foreground text-sm text-center p-0">
+                    <p className="text-base">Links:</p>
+                    <Link
+                      href="https://jdc-droid.github.io/Calculator-Project/"
+                      className="hover:text-blue-500 hover:underline"
+                    >
+                      Calculator Webpage
+                    </Link>
+                    <Link
+                      href="https://github.com/JDC-droid/Calculator-Project"
+                      className="hover:text-blue-500 hover:underline"
+                    >
+                      Github Repository
+                    </Link>
+                  </CardContent>
                 </div>
               </Card>
             </CarouselItem>
             <CarouselItem>
               <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+                <div className="bg-muted rounded-full p-3">
+                  <img
+                    src="https://i.ibb.co/Dfp0JW4f/Screenshot-2025-06-30-064631.png"
+                    alt="JDC-pfp"
+                    className="w-30 h-30 text-primary rounded-full"
+                  />
+                </div>
                 <div className="flex flex-col items-center gap-4">
                   <CardTitle className="text-xl font-semibold text-center">
-                    Weather App
+                    Find more on my github
                   </CardTitle>
-                  <CardContent className="text-muted-foreground text-sm text-center p-0"></CardContent>
+                  <CardContent className="text-muted-foreground text-sm text-center p-0">
+                    <p className="text-base">Link:</p>
+                    <Link
+                      href="https://github.com/JDC-droid"
+                      className="hover:text-blue-500 hover:underline"
+                    >
+                      Github Profile
+                    </Link>
+                  </CardContent>
                 </div>
               </Card>
             </CarouselItem>
