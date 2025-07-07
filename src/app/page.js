@@ -107,7 +107,7 @@ export default function Home() {
                 <li className="flex justify-between mx-auto">
                   HTML{" "}
                   <svg
-                    class="w-6 h-6 text-gray-800 dark:text-white"
+                    className="w-6 h-6 text-gray-800 dark:text-white"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -131,15 +131,16 @@ export default function Home() {
       <h1 className="text-3xl text-center font-bold underline decoration-2 mb-4 mt-10">
         My Projects 🌱
       </h1>
-      <section className="w-full max-w-4xl mx-auto px-4 py-2 mt-10">
+      <section className=" w-full max-w-4xl mx-auto px-4 py-2 mt-10">
         <Carousel
           orientation="vertical"
           className="w-full max-w-2xl mx-auto px-6"
           plugins={[autoplayRef.current]}
         >
-          <CarouselContent className="-ml-4 flex touch-pan-x snap-x snap-mandatory h-[270px] sm:h-[250px] md:h-[270px]">
-            <CarouselItem className="flex-none w-full pl-4 snap-start">
-              <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+          <CarouselContent className="flex flex-col items-center snap-y snap-mandatory h-[380px]">
+
+            <CarouselItem className="flex justify-center w-full pl-4 snap-start">
+              <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between w-full max-w-md gap-y-6">
                 <div className="flex flex-col items-center gap-4">
                   <div className="bg-muted rounded-lg p-3">
                     <img
@@ -165,8 +166,8 @@ export default function Home() {
                 </div>
               </Card>
             </CarouselItem>
-            <CarouselItem>
-              <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+            <CarouselItem className="flex justify-center w-full pl-4">
+              <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between w-full max-w-md gap-y-6">
                 <div className="bg-muted rounded-lg p-3">
                   <img
                     src="https://i.ibb.co/spfkkTw1/Screenshot-2025-04-29-154323.png"
@@ -196,8 +197,8 @@ export default function Home() {
                 </div>
               </Card>
             </CarouselItem>
-            <CarouselItem>
-              <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+            <CarouselItem className="flex justify-center w-full pl-4">
+              <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between w-full max-w-md gap-y-6">
                 <div className="bg-muted rounded-lg p-3">
                   <img
                     src="https://i.ibb.co/C3XwZ7WS/Screenshot-2025-06-30-015438.png"
@@ -227,8 +228,8 @@ export default function Home() {
                 </div>
               </Card>
             </CarouselItem>
-            <CarouselItem>
-              <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+            <CarouselItem className="flex justify-center w-full pl-4">
+              <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between w-full max-w-md gap-y-6">
                 <div className="bg-muted rounded-lg p-3">
                   <img
                     src="https://i.ibb.co/ynxL1rxW/Screenshot-2025-04-29-154425.png"
@@ -258,8 +259,8 @@ export default function Home() {
                 </div>
               </Card>
             </CarouselItem>
-            <CarouselItem>
-              <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between h-[250px] w-[470px] gap-y-6">
+            <CarouselItem className="flex justify-center w-full pl-4">
+              <Card className="p-8 text-center shadow-md border border-border rounded-full flex flex-col items-center justify-between w-full max-w-md gap-y-6">
                 <div className="bg-muted rounded-full p-3">
                   <img
                     src="https://i.ibb.co/Dfp0JW4f/Screenshot-2025-06-30-064631.png"
@@ -284,12 +285,15 @@ export default function Home() {
               </Card>
             </CarouselItem>
           </CarouselContent>
-          <div onClick={pauseAutoplay}>
+          
+          <div onClick={pauseAutoplay} className="flex-items-center">
+            
             <CarouselPrevious />
           </div>
-          <div onClick={pauseAutoplay}>
+          <div onClick={pauseAutoplay} className="flex-items-center">
             <CarouselNext />
           </div>
+          
         </Carousel>
       </section>
       <section className="w-full max-w-4xl mx-auto px-4 py-2 mt-20 mb-10">
