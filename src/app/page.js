@@ -42,7 +42,7 @@ export default function Home() {
   };
 
   return (
-    <div className="grid grid-col-2 md:grid-col-3 lg:grid-col-3 flex justify-center items-center min-h-screen min-w-screen bg-secondary-foreground">
+    <div className="grid grid-col-2 md:grid-col-3 lg:grid-col-3 flex justify-center items-center bg-secondary-foreground min-h-screen min-w-screen">
       <motion.div
         initial={{ opacity: 0, y: 10, scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -120,7 +120,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <ul className="flex flex-col justify-between mx-auto text-lg text-center">
-                <li className="flex flex-wrap justify-between mx-auto">
+                <li className="flex justify-between mx-auto">
                   Javascript{" "}
                   <svg
                     className="pl-1 w-6 h-6 text-gray-800 dark:text-white"
@@ -138,7 +138,7 @@ export default function Home() {
                     />
                   </svg>
                 </li>
-                <li className="flex flex-wrap justify-between mx-auto">
+                <li className="flex justify-between mx-auto">
                   HTML{" "}
                   <svg
                     className="w-6 h-6 text-gray-800 dark:text-white"
@@ -152,7 +152,7 @@ export default function Home() {
                     <path d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
                   </svg>
                 </li>
-                <li className="flex flex-wrap justify-between mx-auto">
+                <li className="flex justify-between mx-auto">
                   CSS{" "}
                   <svg
                     className="w-6 h-6 text-gray-800 dark:text-white"
@@ -167,7 +167,7 @@ export default function Home() {
                   </svg>
                 </li>
 
-                <li className="flex flex-wrap justify-between mx-auto">
+                <li className="flex justify-between mx-auto">
                   Tailwind CSS{" "}
                   <svg
                     className="w-6 h-6 text-gray-800 dark:text-white"
@@ -181,7 +181,7 @@ export default function Home() {
                     <path d="M11.782 5.72a4.773 4.773 0 0 0-4.8 4.173 3.43 3.43 0 0 1 2.741-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.934-2.865 3.137-3.921-.969 1.379-2.44 2.207-4.259 1.231-1.253-.673-2.19-3.438-5.959-3.318ZM6.8 11.979A4.772 4.772 0 0 0 2 16.151a3.431 3.431 0 0 1 2.745-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.933-2.865 3.137-3.921-.97 1.379-2.44 2.208-4.259 1.231-1.253-.673-2.19-3.443-5.963-3.317Z" />
                   </svg>
                 </li>
-                <li className="flex flex-wrap justify-between mx-auto">
+                <li className="flex justify-between mx-auto">
                   Next.js (basics){" "}
                   <svg
                     className="pl-1 w-6 h-6 text-gray-800 dark:text-white"
@@ -191,7 +191,7 @@ export default function Home() {
                     <path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64c11.2 0 21.7-2.9 30.8-7.9L48.4 55.3v36.6h-6.8V41.8h6.8l50.5 75.8C116.4 106.2 128 86.5 128 64c0-35.3-28.7-64-64-64zm22.1 84.6l-7.5-11.3V41.8h7.5v42.8z" />
                   </svg>
                 </li>
-                <li className="flex flex-wrap justify-between mx-auto">
+                <li className="flex justify-between mx-auto">
                   Node.js (basics){" "}
                   <svg
                     className="w-6 h-6 text-gray-800 dark:text-white"
@@ -204,7 +204,7 @@ export default function Home() {
                     />
                   </svg>
                 </li>
-                <li className="flex flex-wrap justify-between mx-auto">
+                <li className="flex justify-between mx-auto">
                   React (basics){" "}
                   <svg
                     className="w-6 h-6 text-gray-800 dark:text-white"
