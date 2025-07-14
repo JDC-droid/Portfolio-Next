@@ -42,13 +42,13 @@ export default function Home() {
   };
 
   return (
-    <div className="grid grid-col-2 md:grid-col-3 lg:grid-col-3 flex justify-center items-center bg-secondary-foreground min-h-screen min-w-screen">
+    <div className="grid grid-col-2 md:grid-col-3 lg:grid-col-3 justify-center items-center bg-secondary-foreground min-h-screen min-w-screen">
       <motion.div
         initial={{ opacity: 0, y: 10, scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1.0 }}
       >
-        <div className="flex flex-col justify-between text-center mx-auto w-107 p-5 mt-6 bg-primary rounded-lg shadow-lg">
+        <div className="flex flex-col justify-between text-center mx-auto p-5 mt-6 bg-primary rounded-lg shadow-lg">
           <h1 className="text-5xl text-[#12151c] font-bold">Joshua Degg</h1>
           <p className="text-secondary">Software Developer</p>
         </div>
