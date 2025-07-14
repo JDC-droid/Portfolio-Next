@@ -42,7 +42,7 @@ export default function Home() {
   };
 
   return (
-    <div className="grid grid-col-2 md:grid-col-3 lg:grid-col-3 justify-center items-center bg-secondary-foreground min-h-screen min-w-screen">
+    <div className="grid justify-center items-center bg-secondary-foreground min-h-screen w-full overflow-x-hidden">
       <motion.div
         initial={{ opacity: 0, y: 10, scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
